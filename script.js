@@ -9,10 +9,10 @@ let birthdayPicker = document.querySelector("[name=birthday]")
 //********YIL */
 birthdayPicker.addEventListener("change",function event(){
     //YIL
-    let yearss = new Date().getFullYear() - new Date(birthdayPicker.value).getFullYear()-1;
+    let yearss = new Date().getFullYear() - new Date(birthdayPicker.value).getFullYear();
     document.getElementById("yearsonur").innerHTML = yearss;
     //AY
-    let month = new Date().getMonth() - new Date(birthdayPicker.value).getMonth()+11  ;
+    let month = new Date().getMonth() - new Date(birthdayPicker.value).getMonth() ;
     document.getElementById("months").innerHTML = month;
     //GÜN
     let day = new Date().getDate() - new Date(birthdayPicker.value).getDate()  ;

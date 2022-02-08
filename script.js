@@ -12,10 +12,10 @@ birthdayPicker.addEventListener("change",function event(){
     let yearss = new Date().getFullYear() - new Date(birthdayPicker.value).getFullYear()-1;
     document.getElementById("yearsonur").innerHTML = yearss;
     //AY
-    let month = new Date().getMonth() - new Date(birthdayPicker.value).getMonth()+12  ;
+    let month = new Date().getMonth() - new Date(birthdayPicker.value).getMonth()+11  ;
     document.getElementById("months").innerHTML = month;
     //GÜN
-    let day = new Date().getDate() - new Date(birthdayPicker.value).getDate()+31  ;
+    let day = new Date().getDate() - new Date(birthdayPicker.value).getDate()  ;
     document.getElementById("days").innerHTML = day;
     //SAAT
     let hours = new Date().getHours() - new Date(birthdayPicker.value).getHours()  ;
@@ -27,6 +27,15 @@ birthdayPicker.addEventListener("change",function event(){
     let seconds = new Date().getSeconds() - new Date(birthdayPicker.value).getSeconds()  ;
     document.getElementById("seconds").innerHTML = seconds;
     setInterval(event, 1000);
+
+    if(day <0){
+        day +=31;
+        month -= 1
+    };
+    if(month < 0){
+        month += 12;
+        year -= 1;
+    };
 })
 let body = document.querySelector('body')
 let loading = document.querySelector('.loading')

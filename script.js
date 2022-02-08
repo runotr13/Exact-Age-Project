@@ -15,7 +15,7 @@ birthdayPicker.addEventListener("change",function event(){
     let month = new Date().getMonth() - new Date(birthdayPicker.value).getMonth()+12  ;
     document.getElementById("months").innerHTML = month;
     //GÜN
-    let day = new Date().getDate() - new Date(birthdayPicker.value).getDate()+29  ;
+    let day = new Date().getDate() - new Date(birthdayPicker.value).getDate()+31  ;
     document.getElementById("days").innerHTML = day;
     //SAAT
     let hours = new Date().getHours() - new Date(birthdayPicker.value).getHours()  ;

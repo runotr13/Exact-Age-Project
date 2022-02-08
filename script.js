@@ -34,7 +34,7 @@ birthdayPicker.addEventListener("change",function event(){
     };
     if(month < 0){
         month += 12;
-        year -= 1;
+        yearss -= 1;
     };
 })
 let body = document.querySelector('body')

@@ -9,13 +9,13 @@ let birthdayPicker = document.querySelector("[name=birthday]")
 //********YIL */
 birthdayPicker.addEventListener("change",function event(){
     //YIL
-    let yearss = new Date().getFullYear() - new Date(birthdayPicker.value).getFullYear();
+    let yearss = new Date().getFullYear() - new Date(birthdayPicker.value).getFullYear()-1;
     document.getElementById("yearsonur").innerHTML = yearss;
     //AY
-    let month = new Date().getMonth() - new Date(birthdayPicker.value).getMonth() ;
+    let month = new Date().getMonth() - new Date(birthdayPicker.value).getMonth() +11;
     document.getElementById("months").innerHTML = month;
     //GÜN
-    let day = new Date().getDate() - new Date(birthdayPicker.value).getDate()  ;
+    let day = new Date().getDate() - new Date(birthdayPicker.value).getDate() +31 ;
     document.getElementById("days").innerHTML = day;
     //SAAT
     let hours = new Date().getHours() - new Date(birthdayPicker.value).getHours()  ;
@@ -28,14 +28,6 @@ birthdayPicker.addEventListener("change",function event(){
     document.getElementById("seconds").innerHTML = seconds;
     setInterval(event, 1000);
 
-    if(day <0){
-        day +=31;
-        month -= 1
-    };
-    if(month < 0){
-        month += 12;
-        yearss -= 1;
-    };
 })
 let body = document.querySelector('body')
 let loading = document.querySelector('.loading')
